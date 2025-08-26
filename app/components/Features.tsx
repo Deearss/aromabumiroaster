@@ -1,7 +1,7 @@
 import React from "react";
 import { GiCoffeeBeans } from "react-icons/gi";
 import { IoLeafOutline } from "react-icons/io5";
-import { MdTableRestaurant } from "react-icons/md";
+import { FaFire } from "react-icons/fa";
 
 const Features = () => {
   return (
@@ -9,7 +9,7 @@ const Features = () => {
       <section className="w-full py-20 bg-primary_dark">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center text-secondary mb-12">
-            Mengapa Memilih Aroma Bumi Roasters?
+            Mengapa Memilih Aroma Bumi Roaster?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Feature 1 */}
@@ -43,14 +43,14 @@ const Features = () => {
             {/* Feature 3 */}
             <div className="text-center group">
               <div className="w-20 h-20 bg-accent rounded-full mx-auto mb-4 flexcc transition-all duration-300 group-hover:scale-110 group-hover:bg-accent/80 group-hover:shadow-lg">
-                <MdTableRestaurant className="text-white text-3xl transition-transform duration-300 group-hover:rotate-12" />
+                <FaFire className="text-white text-3xl transition-transform duration-300 group-hover:rotate-12" />
               </div>
               <h3 className="text-xl font-semibold text-secondary mb-2 transition-colors group-hover:text-accent">
-                Cozy Atmosphere
+                Expert Roasting
               </h3>
               <p className="text-secondary/70 transition-colors group-hover:text-secondary/90">
-                Suasana hangat dan nyaman untuk menikmati kopi berkualitas
-                bersama teman
+                Proses roasting dengan metode artisan yang dikuasai oleh ahli
+                berpengalaman puluhan tahun
               </p>
             </div>
           </div>

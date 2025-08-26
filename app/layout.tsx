@@ -15,7 +15,7 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: "Aroma Bumi Roasters - Welcome to Our Coffee World",
+  title: "Aroma Bumi Roaster - Welcome to Our Coffee World",
   description:
     "Discover the finest Indonesian specialty coffee, roasted with passion.",
 };

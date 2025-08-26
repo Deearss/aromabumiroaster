@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { FaInstagram, FaFacebook } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaInstagram, FaFacebook, FaYoutube } from "react-icons/fa";
+import { FaTiktok } from "react-icons/fa6";
 
 export default function Footer() {
   return (
@@ -55,26 +55,36 @@ export default function Footer() {
             <Link
               href="#"
               className="block text-gray-600 hover:text-yellow-900"
+              aria-label="TikTok"
             >
-              <FaXTwitter size={20} />
+              <FaTiktok size={20} />
             </Link>
             <Link
               href="#"
               className="block text-gray-600 hover:text-yellow-900"
+              aria-label="Instagram"
             >
               <FaInstagram size={20} />
             </Link>
             <Link
               href="#"
               className="block text-gray-600 hover:text-yellow-900"
+              aria-label="Facebook"
             >
               <FaFacebook size={20} />
+            </Link>
+            <Link
+              href="#"
+              className="block text-gray-600 hover:text-yellow-900"
+              aria-label="YouTube"
+            >
+              <FaYoutube size={20} />
             </Link>
           </div>
 
           {/* COPYRIGHT NOTICE */}
           <p className="text-gray-600 lg:flex-1 text-sm font-bold text-center">
-            © 2025 Aroma Bumi Roasters. All rights reserved.
+            © 2025 Aroma Bumi Roaster. All rights reserved.
           </p>
         </div>
       </div>

@@ -1,4 +1,5 @@
-import { FaCoffee, FaEnvelope, FaHome, FaInfoCircle } from "react-icons/fa";
+import { FaEnvelope, FaHome, FaInfoCircle } from "react-icons/fa";
+import { GiCoffeeBeans } from "react-icons/gi";
 
 import { cn } from "../../../lib/utils";
 import Tab from "./Tab";
@@ -7,7 +8,7 @@ import { motion } from "framer-motion";
 
 const navLinks = [
   { name: "Home", href: "/", icon: FaHome },
-  { name: "Menu", href: "/menu", icon: FaCoffee },
+  { name: "Beans", href: "/beans", icon: GiCoffeeBeans },
   { name: "About", href: "/about", icon: FaInfoCircle },
   { name: "Contact", href: "/contact", icon: FaEnvelope },
 ];
@@ -59,7 +60,11 @@ const LineTabs = ({
         ))}
 
         {/* Cart Tab di tengah */}
-        <CartTab needBackground={needBackground} hasAnimated={hasAnimated} />
+        <CartTab
+          needBackground={needBackground}
+          hasAnimated={hasAnimated}
+          notRoot={notRoot}
+        />
 
         {navLinks.slice(2).map((link, index) => (
           <Tab

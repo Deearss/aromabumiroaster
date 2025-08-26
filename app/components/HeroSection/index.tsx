@@ -45,6 +45,68 @@ const HeroSection = () => {
     return () => window.removeEventListener("resize", checkDevice);
   }, []);
 
+  // useEffect untuk scroll lock saat animasi hero - Langsung block scroll
+  useEffect(() => {
+    const preventScroll = (e: Event) => {
+      e.preventDefault();
+      e.stopPropagation();
+      return false;
+    };
+
+    const preventKeyScroll = (e: KeyboardEvent) => {
+      if (
+        [
+          "ArrowUp",
+          "ArrowDown",
+          "PageUp",
+          "PageDown",
+          "Home",
+          "End",
+          "Space",
+        ].includes(e.code)
+      ) {
+        e.preventDefault();
+      }
+    };
+
+    // Langsung disable scroll sejak komponen mount jika video belum ready atau animasi belum selesai
+    if (!isVideoReady || !animationsComplete) {
+      // Immediately disable scroll - no delay
+      document.body.style.overflow = "hidden";
+      document.body.style.position = "fixed";
+      document.body.style.width = "100%";
+      document.body.style.top = "0";
+
+      document.addEventListener("wheel", preventScroll, { passive: false });
+      document.addEventListener("touchmove", preventScroll, { passive: false });
+      document.addEventListener("keydown", preventKeyScroll, {
+        passive: false,
+      });
+    } else {
+      // Enable scroll
+      document.body.style.overflow = "";
+      document.body.style.position = "";
+      document.body.style.width = "";
+      document.body.style.top = "";
+
+      document.removeEventListener("wheel", preventScroll);
+      document.removeEventListener("touchmove", preventScroll);
+      document.removeEventListener("keydown", preventKeyScroll);
+    }
+
+    return () => {
+      // Cleanup - always restore scroll
+      document.body.style.overflow = "";
+      document.body.style.position = "";
+      document.body.style.width = "";
+      document.body.style.top = "";
+
+      document.removeEventListener("wheel", preventScroll);
+      document.removeEventListener("touchmove", preventScroll);
+      document.removeEventListener("keydown", preventKeyScroll);
+    };
+  }, [isVideoReady, animationsComplete]);
+
   // handle video loading
   useEffect(() => {
     // Jika video sudah pernah dimuat, skip loading
@@ -232,7 +294,7 @@ const HeroSection = () => {
               hasAnimated ? { duration: 0 } : { duration: 3, ease: "easeOut" }
             }
           >
-            AROMA BUMI ROASTERS
+            AROMA BUMI ROASTER
           </motion.h1>
           <motion.h2
             className="font-semibold text-[0.9rem] lg:text-[1.3rem] px-16 mb-8 text-secondary/70"
@@ -244,7 +306,7 @@ const HeroSection = () => {
                 : { duration: 2.8, ease: "easeOut", delay: 1.5 }
             }
           >
-            Crafting the Perfect Cup of Indonesian Coffee
+            Premium Indonesian Coffee Beans, Roasted to Perfection
           </motion.h2>
 
           <ButtonHoverTopFlip skipAnimation={hasAnimated} />

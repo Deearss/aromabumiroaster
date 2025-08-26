@@ -31,9 +31,9 @@ Custom utilities are defined for common patterns:
 - `@utility clicked` - interactive cursor and scale effects
 - `@utility transall` - standard transitions
 
-## Project Overview: Aroma Bumi Roasters
+## Project Overview: Aroma Bumi Roaster
 
-This is a modern company profile website for a premium Indonesian coffee shop named "Aroma Bumi Roasters" with full e-commerce functionality.
+This is a modern company profile website for a premium Indonesian coffee roastery named "Aroma Bumi Roaster" with full e-commerce functionality.
 
 ### Pages Structure
 

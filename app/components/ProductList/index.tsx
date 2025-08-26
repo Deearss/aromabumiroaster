@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { Product } from "../types";
-import { useCartStore } from "../store/cartStore";
+import { Product } from "../../types";
+import AddToCartButton from "./AddToCartButton";
 
 // Mock data for products - ini bisa diganti dengan fetch dari API
 const mockProducts: Product[] = [
@@ -57,15 +57,7 @@ const mockProducts: Product[] = [
 ];
 
 // Client Component untuk cart functionality
-export default function ProductList() {
-  const { addToCart } = useCartStore();
-
-  const handleAddToCart = (product: Product) => {
-    addToCart(product);
-
-    console.log("Added to cart:", product.name);
-  };
-
+export default function ProductList({ showCTA = true }: { showCTA?: boolean }) {
   return (
     <section id="product-list" className="w-full py-16 bg-secondary">
       <div className="container mx-auto px-6">
@@ -123,7 +115,7 @@ export default function ProductList() {
 
               {/* Product Info */}
               <div className="p-6">
-                <h3 className="text-xl font-bold text-primary mb-2 font-playfair">
+                <h3 className="text-xl font-bold text-primary mb-2">
                   {product.name}
                 </h3>
 
@@ -146,13 +138,10 @@ export default function ProductList() {
 
                 {/* Action Buttons */}
                 <div className="flex gap-3">
-                  <button
-                    onClick={() => handleAddToCart(product)}
-                    data-add-cart={product.id}
-                    className="flex-1 bg-primary text-secondary py-3 rounded-lg font-semibold hover:bg-primary_dark transition-all duration-200 active:scale-95 focus:outline-none focus:ring-2 focus:ring-accent/50"
-                  >
+                  <AddToCartButton product={product}>
                     Tambah ke Keranjang
-                  </button>
+                  </AddToCartButton>
+
                   <button className="px-4 py-3 border-2 border-accent text-accent rounded-lg hover:bg-accent hover:text-white transition-all duration-200 active:scale-95">
                     <svg
                       className="w-5 h-5"
@@ -181,15 +170,20 @@ export default function ProductList() {
           ))}
         </div>
 
-        {/* Bottom CTA */}
-        {/* <div className="text-center mt-12">
-          <p className="text-accent mb-4">
-            Tidak menemukan kopi yang Anda cari?
-          </p>
-          <button className="bg-accent text-white px-8 py-3 rounded-lg hover:bg-primary transition-colors duration-200 font-semibold">
-            Lihat Semua Produk
-          </button>
-        </div> */}
+        {/* Bottom CTA - Hanya tampil jika showCTA true */}
+        {showCTA && (
+          <div className="text-center mt-12">
+            <p className="text-accent mb-4">
+              Ingin melihat koleksi lengkap biji kopi premium kami?
+            </p>
+            <a
+              href="/beans"
+              className="inline-block bg-accent text-white px-8 py-3 rounded-lg hover:bg-primary transition-colors duration-200 font-semibold clicked"
+            >
+              Lihat Semua Produk Kami
+            </a>
+          </div>
+        )}
       </div>
     </section>
   );

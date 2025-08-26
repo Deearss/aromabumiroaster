@@ -9,11 +9,13 @@ import {
 } from "react-icons/fa";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import Gallery from "../components/Gallery";
+import LocationsAndPartners from "../components/LocationsAndPartners";
 
 export const metadata: Metadata = {
-  title: "About Us - Aroma Bumi Roasters",
+  title: "About Us - Aroma Bumi Roaster",
   description:
-    "Pelajari lebih lanjut tentang sejarah dan misi kami di Aroma Bumi Roasters.",
+    "Pelajari lebih lanjut tentang sejarah dan misi kami di Aroma Bumi Roaster.",
 };
 
 export default function AboutPage() {
@@ -25,15 +27,8 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 pt-24">
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold text-primary mb-4 font-playfair">
-              About Aroma Bumi Roasters
+              About Us
             </h1>
-            <div className="flexc gap-2 text-accent mb-6">
-              <FaCoffee className="text-2xl" />
-              <span className="text-lg font-lato">
-                Crafted with Passion, Roasted with Love
-              </span>
-              <FaCoffee className="text-2xl" />
-            </div>
           </div>
 
           {/* Main Content */}
@@ -56,7 +51,7 @@ export default function AboutPage() {
                   Our Story
                 </h2>
                 <p className="text-text font-lato leading-relaxed mb-4">
-                  Aroma Bumi Roasters didirikan pada tahun 2020 dengan mimpi
+                  Aroma Bumi Roaster didirikan pada tahun 2020 dengan mimpi
                   sederhana: menyajikan kopi terbaik dari biji kopi pilihan
                   Indonesia kepada dunia. Kami percaya bahwa setiap cangkir kopi
                   memiliki cerita, dari petani yang menanamnya hingga proses
@@ -176,6 +171,12 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
+
+        {/* Gallery Section */}
+        <Gallery />
+
+        {/* Locations and Partners Section */}
+        <LocationsAndPartners />
       </div>
       <Footer />
     </>
