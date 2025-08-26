@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 const navLinks = [
   { name: "Beranda", href: "/", icon: FaHouse },
   { name: "Kopi", href: "/beans", icon: GiCoffeeBeans },
-  { name: "Karir", href: "/about", icon: FaBusinessTime },
+  { name: "Karir", href: "/career", icon: FaBusinessTime },
   { name: "Kontak", href: "/contact", icon: FaEnvelope },
 ];
 

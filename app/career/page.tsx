@@ -14,12 +14,12 @@ export const metadata: Metadata = {
     "Pelajari lebih lanjut tentang sejarah dan misi kami di Aroma Bumi Roaster.",
 };
 
-export default function AboutPage() {
+export default function CareerPage() {
   return (
     <>
       <Navbar notRoot={true} />
       <section className="w-full relative h-10 lg:h-20 bg-transparent" />
-      <section className="min-h-screen flexcc w-full bg-secondary p-2 lg:p-0">
+      <section className="min-h-screen flexcc w-full bg-secondary lg:p-0">
         {/* Hero Section */}
         <div className="container px-4 sm:px-4 md:px-6 lg:px-8 py-6 md:py-8 pt-16 md:pt-20 lg:pt-24">
           <div className="text-center mb-6 md:mb-10">

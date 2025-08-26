@@ -48,7 +48,7 @@ const Gallery = () => {
   ];
 
   return (
-    <section className="w-full py-8 md:py-16 bg-white">
+    <section className="w-full py-10 lg:py-20 bg-white">
       <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-8 md:mb-12">
@@ -56,7 +56,7 @@ const Gallery = () => {
             Galeri
           </h2>
           <p className="text-sm md:text-base lg:text-lg text-accent max-w-2xl mx-auto px-2 md:px-0">
-            Lihat proses produksi dan fasilitas premium Aroma Bumi Roaster
+            Lihat proses produksi dan fasilitas utama Aroma Bumi Roaster
           </p>
         </div>
 

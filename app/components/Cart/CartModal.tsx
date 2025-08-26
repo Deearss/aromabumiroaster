@@ -135,7 +135,7 @@ const CartModal = ({ isOpen, onClose }: CartModalProps) => {
             {/* Cart Content */}
             <div className="flex flex-col h-[100%] overflow-hidden w-full">
               {/* Items List */}
-              <div className="flexcc flex-1 !justify-start lg:pr-4 overflow-y-auto">
+              <div className="flexcc flex-1 !justify-start overflow-y-auto">
                 {itemCount === 0 ? (
                   <div className="flexcc flex-col gap-4 p-8 text-center">
                     <FaShoppingCart className="text-4xl text-accent/50" />

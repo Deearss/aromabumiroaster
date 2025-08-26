@@ -19,7 +19,7 @@ const ContactPage = () => {
       <Navbar notRoot={true} />
 
       {/* Hero Section */}
-      <section className="h-6 md:h-10 lg:h-20 w-full bg-transparent" />
+      <section className="w-full relative h-16 lg:h-20 bg-transparent" />
 
       {/* Main Content */}
       <section className="py-8 md:py-12 lg:py-16 px-3 md:px-4 lg:px-6 bg-secondary">
@@ -28,12 +28,13 @@ const ContactPage = () => {
             {/* Contact Information */}
             <div className="space-y-6 md:space-y-8">
               <div>
-                <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4 md:mb-6 lg:mb-8">
+                <h2 className="text-2xl md:text-3xl text-center md:text-left font-bold text-primary mb-2 lg:mb-3">
                   Hubungi Kami
                 </h2>
-                <p className="text-text/80 text-sm md:text-base lg:text-lg mb-6 md:mb-8">
-                  Kami selalu senang mendengar dari para pecinta kopi! Jangan
-                  ragu untuk menghubungi kami melalui berbagai cara berikut.
+                <p className="text-text/80 text-sm md:text-base text-center md:text-left px-4 md:px-0 lg:text-lg mb-6 md:mb-8">
+                  Kami selalu senang mendengar cerita dari para pecinta kopi.
+                  Jangan ragu untuk menghubungi kami melalui berbagai cara
+                  berikut.
                 </p>
               </div>
 
@@ -112,7 +113,7 @@ const ContactPage = () => {
               </div>
 
               {/* Social Media */}
-              <div className="pt-6 md:pt-8">
+              <div className="pt-6 md:pt-8 mb-5 md:mb-0">
                 <h3 className="text-center lg:text-left text-lg md:text-xl font-bold text-primary mb-3 md:mb-4">
                   Ikuti Kami
                 </h3>
@@ -148,7 +149,7 @@ const ContactPage = () => {
             {/* Contact Form */}
             <div className="bg-white p-4 md:p-6 lg:p-8 rounded-2xl shadow-xl">
               <h2 className="text-center text-xl md:text-2xl lg:text-3xl font-bold text-primary mb-4 md:mb-6">
-                Kirim Pesan
+                Formulir Kontak
               </h2>
 
               <ContactForm />
@@ -164,7 +165,7 @@ const ContactPage = () => {
             Kantor Pusat
           </h2>
 
-          <div className="relative z-[1] w-full rounded-2xl flexcc min-h-[450px] overflow-hidden">
+          <div className="relative z-[1] w-full rounded-2xl overflow-hidden flexcc min-h-[450px]">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126920.24102051799!2d106.74711713003863!3d-6.229740108094114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5d2e764b12d%3A0x3d2ad6e1e0e9bcc8!2sMonumen%20Nasional!5e0!3m2!1sid!2sid!4v1756195729703!5m2!1sid!2sid"
               width="100%"
@@ -176,8 +177,8 @@ const ContactPage = () => {
             />
           </div>
 
-          <p className="text-secondary/70 mt-6 max-w-2xl mx-auto">
-            Terletak di jantung kota Jakarta, coffee shop kami mudah dijangkau
+          <p className="text-secondary/70 text-sm md:text-base mt-6 max-w-[20rem] md:px-0 w-full md:max-w-2xl mx-auto">
+            Terletak di jantung kota Jakarta, kantor pusat kami mudah dijangkau
             dengan berbagai transportasi umum. Parkir tersedia dan akses ramah
             disabilitas.
           </p>

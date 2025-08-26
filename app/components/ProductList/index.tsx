@@ -164,98 +164,100 @@ export default function ProductList({ showCTA = true }: ProductListProps) {
         className="w-full relative h-10 lg:h-20 bg-transparent"
       />
       <section className="py-20 bg-secondary">
-        <div className="container mx-auto px-6">
+        <div className="container flexcc gap-24 mx-auto px-6">
           {/* Header - menggunakan font-playfair untuk judul utama */}
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4 font-playfair">
-              Koleksi <br className="lg:hidden" /> Kopi Unggulan
-            </h2>
-            <p className="text-base lg:text-lg text-text px-3 lg:px-0 max-w-3xl mx-auto">
-              koleksi biji kopi pilihan dari berbagai daerah di Indonesia.
-              <br />
-              Setiap biji dipilih dengan teliti untuk memberikan pengalaman kopi
-              terbaik.
-            </p>
-          </div>
+          <div className={`${showCTA ? "order-2" : "order-1"}`}>
+            <div className="text-center mb-10">
+              <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4 font-playfair">
+                Koleksi <br className="lg:hidden" /> Kopi Unggulan
+              </h2>
+              <p className="text-base lg:text-lg text-text px-3 lg:px-0 max-w-3xl mx-auto">
+                koleksi biji kopi pilihan dari berbagai daerah di Indonesia.
+                <br />
+                Setiap biji dipilih dengan teliti untuk memberikan pengalaman
+                kopi terbaik.
+              </p>
+            </div>
 
-          {/* Product Grid - Single Origin */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {indonesianCoffeeProducts.map((product) => (
-              <div
-                key={product.id}
-                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
-              >
-                {/* Product Image */}
-                <div className="relative h-64 bg-gradient-to-br from-accent/20 to-primary/10">
-                  <div className="absolute inset-0 flexc">
-                    <div className="atranscenter w-full h-full bg-primary/30 z-[2]" />
-                    <Image
-                      src={product.image || "/images/coffee_banner_menu.jpg"}
-                      alt={product.name}
-                      width={1920}
-                      height={1080}
-                      title="Image by diapicard from Pixabay"
-                      className="object-cover w-full h-full"
-                    />
-                  </div>
-
-                  {/* Weight Badge */}
-                  <div className="absolute z-[3] top-3 left-3 bg-accent text-white px-4 py-2 rounded-full text-xs font-bold flexc gap-1">
-                    <FaWeight className="text-xs" />
-                    {product.weight}g
-                  </div>
-                </div>
-
-                {/* Product Info */}
-                <div className="p-6">
-                  {/* Product Name - menggunakan font regular (Lato) */}
-                  <h3 className="text-xl text-center font-bold text-primary mb-2">
-                    {product.name}
-                  </h3>
-
-                  {/* Rating */}
-                  <div className="flexc w-full gap-2 mb-3">
-                    <div className="flex items-center gap-1">
-                      {renderStars(product.rating)}
+            {/* Product Grid - Single Origin */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {indonesianCoffeeProducts.map((product) => (
+                <div
+                  key={product.id}
+                  className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                >
+                  {/* Product Image */}
+                  <div className="relative h-64 bg-gradient-to-br from-accent/20 to-primary/10">
+                    <div className="absolute inset-0 flexc">
+                      <div className="atranscenter w-full h-full bg-primary/30 z-[2]" />
+                      <Image
+                        src={product.image || "/images/coffee_banner_menu.jpg"}
+                        alt={product.name}
+                        width={1920}
+                        height={1080}
+                        title="Image by diapicard from Pixabay"
+                        className="object-cover w-full h-full"
+                      />
                     </div>
-                    <span className="text-sm text-gray-600">
-                      {product.rating} ({product.reviewCount} ulasan)
-                    </span>
+
+                    {/* Weight Badge */}
+                    <div className="absolute z-[3] top-3 left-3 bg-accent text-white px-4 py-2 rounded-full text-xs font-bold flexc gap-1">
+                      <FaWeight className="text-xs" />
+                      {product.weight}g
+                    </div>
                   </div>
 
-                  {/* Description */}
-                  <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-                    {product.description}
-                  </p>
+                  {/* Product Info */}
+                  <div className="p-6">
+                    {/* Product Name - menggunakan font regular (Lato) */}
+                    <h3 className="text-xl text-center font-bold text-primary mb-2">
+                      {product.name}
+                    </h3>
 
-                  {/* Price and Add to Cart */}
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <span className="text-2xl font-bold text-primary">
-                        Rp{product.price.toLocaleString("id-ID")}
-                      </span>
-                      <span className="text-sm text-gray-500 block">
-                        per {product.weight}g
+                    {/* Rating */}
+                    <div className="flexc w-full gap-2 mb-3">
+                      <div className="flex items-center gap-1">
+                        {renderStars(product.rating)}
+                      </div>
+                      <span className="text-sm text-gray-600">
+                        {product.rating} ({product.reviewCount} ulasan)
                       </span>
                     </div>
 
-                    <button
-                      onClick={() => handleAddToCart(product)}
-                      className="bg-accent cursor-pointer active:scale-95 transall hover:bg-accent/90 text-white px-4 py-2 rounded-lg flexc gap-2 font-medium"
-                    >
-                      <FaPlus className="text-sm" />
-                      Tambah
-                    </button>
+                    {/* Description */}
+                    <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+                      {product.description}
+                    </p>
+
+                    {/* Price and Add to Cart */}
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <span className="text-2xl font-bold text-primary">
+                          Rp{product.price.toLocaleString("id-ID")}
+                        </span>
+                        <span className="text-sm text-gray-500 block">
+                          per {product.weight}g
+                        </span>
+                      </div>
+
+                      <button
+                        onClick={() => handleAddToCart(product)}
+                        className="bg-accent cursor-pointer active:scale-95 transall hover:bg-accent/90 text-white px-4 py-2 rounded-lg flexc gap-2 font-medium"
+                      >
+                        <FaPlus className="text-sm" />
+                        Tambah
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
 
           {/* Bundle Packages Section - hanya muncul jika showCTA=false */}
           {!showCTA && (
-            <>
-              <div className="mt-20 mb-16 text-center">
+            <div className={`${showCTA ? "order-1" : "2"}`}>
+              <div className="mb-10 text-center">
                 <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4 font-playfair">
                   Paket Bundle <br className="lg:hidden" /> Spesial
                 </h2>
@@ -331,7 +333,7 @@ export default function ProductList({ showCTA = true }: ProductListProps) {
 
                         <button
                           onClick={() => handleAddToCart(bundle)}
-                          className="bg-gradient-to-r from-accent to-primary hover:from-accent/90 hover:to-primary/90 text-white px-4 py-2 rounded-lg transition-all duration-200 flex items-center gap-2 font-medium"
+                          className="bg-gradient-to-r cursor-pointer active:scale-95 transall from-accent to-primary hover:from-accent/90 hover:to-primary/90 text-white px-4 py-2 rounded-lg flex items-center gap-2 font-medium"
                         >
                           <FaPlus className="text-sm" />
                           Tambah
@@ -341,7 +343,7 @@ export default function ProductList({ showCTA = true }: ProductListProps) {
                   </div>
                 ))}
               </div>
-            </>
+            </div>
           )}
 
           {/* Call to Action */}

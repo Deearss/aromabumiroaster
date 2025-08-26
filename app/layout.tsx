@@ -44,6 +44,13 @@ export default async function RootLayout({
           type="image/jpeg"
           crossOrigin="anonymous"
         />
+        <link
+          rel="preload"
+          as="fetch"
+          href="/images/coffee_roaster.jpg"
+          type="image/jpeg"
+          crossOrigin="anonymous"
+        />
       </head>
       <body
         className={`${playfair.variable} ${lato.variable} ${lato.className}`}

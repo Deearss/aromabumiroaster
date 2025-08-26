@@ -4,7 +4,7 @@ import { FaSeedling, FaLeaf, FaHandshake } from "react-icons/fa";
 
 export default function ValuesAndMission() {
   return (
-    <div className="container rounded-lg p-4 md:p-6 lg:p-8 mb-12 md:mb-16">
+    <div className="container rounded-lg px-4 py-10 lg:py-20">
       <div className="text-center mb-6 md:mb-8">
         <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-primary mb-3 md:mb-4 font-playfair flex items-center gap-2 md:gap-3 justify-center">
           Visi & Misi

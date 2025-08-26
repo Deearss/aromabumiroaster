@@ -1,14 +1,13 @@
 import Link from "next/link";
-import { FaInstagram, FaFacebook, FaYoutube } from "react-icons/fa";
-import { FaTiktok } from "react-icons/fa6";
+import { FaTiktok, FaInstagram, FaFacebook, FaYoutube } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-100 mt-8 md:mt-10 lg:mt-12">
-      <div className="container mx-auto px-2 md:px-4 lg:px-6 py-3 md:py-4">
-        <div className="flex flex-col lg:flex-row w-full items-start lg:items-center gap-4 md:gap-5">
+    <footer className="bg-gray-100 pt-4 px-4 pb-3 md:pt-10 lg:pt-12">
+      <div className="container mx-auto  py-3 md:py-4">
+        <div className="flex flex-col lg:flex-row w-full items-start space-y-4 lg:space-y-0 lg:items-center gap-4 md:gap-5">
           {/* FOOTAGE CREDITS */}
-          <div className="lg:flex-1">
+          <div className="w-full flexcc lg:!items-start lg:w-auto lg:flex-1">
             <h1 className="font-bold text-sm md:text-base lg:text-lg mb-2 md:mb-3">
               Terima kasih atas footage gratis dari :
             </h1>
@@ -62,8 +61,8 @@ export default function Footer() {
           </div>
 
           {/* SOCIAL MEDIA LINKS */}
-          <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row items-start sm:items-center lg:items-start xl:items-center lg:flex-1 gap-3 md:gap-4">
-            <h1 className="font-bold text-sm md:text-base lg:text-lg">
+          <div className="mx-auto flex flex-col sm:flex-row lg:flex-col xl:flex-row justify-center items-start sm:items-center lg:items-start xl:items-center lg:flex-1 gap-3 md:gap-4">
+            <h1 className="font-bold text-center lg:text-left w-full lg:w-auto text-sm md:text-base lg:text-lg">
               Ikuti kami di :
             </h1>
 
@@ -103,7 +102,7 @@ export default function Footer() {
           </div>
 
           {/* COPYRIGHT NOTICE */}
-          <p className="text-gray-600 lg:flex-1 text-xs md:text-sm lg:text-base font-bold text-center lg:text-left xl:text-center mt-2 lg:mt-0">
+          <p className="text-gray-600 lg:flex-1 text-xs md:text-sm lg:text-base font-bold text-center lg:!text-right xl:text-center w-full lg:w-auto mt-2 lg:mt-0">
             © 2025 Aroma Bumi Roaster. Hak cipta dilindungi.
           </p>
         </div>

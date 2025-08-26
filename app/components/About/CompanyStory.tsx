@@ -4,7 +4,7 @@ import { FaCoffee, FaHandshake, FaSeedling, FaUsers } from "react-icons/fa";
 
 export default function CompanyStory() {
   return (
-    <div className="space-y-8 md:space-y-12 lg:space-y-16 mb-12 md:mb-16">
+    <div className="space-y-8 p-2 md:space-y-12 lg:space-y-16 mb-12 md:mb-16">
       {/* Chapter 1: Awal Mula Ide */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 lg:gap-8 items-center">
         <div className="order-2 mb-2 lg:order-1 overflow-hidden rounded-lg relative">

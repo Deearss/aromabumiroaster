@@ -7,6 +7,8 @@ const ContactForm = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    e.currentTarget.reset();
+
     // Handle form submission logic here
     alert("Terima kasih karena telah menghubungi Aroma Bumi Roaster 🙏");
   };
@@ -16,7 +18,7 @@ const ContactForm = () => {
       <form className="space-y-6" onSubmit={handleSubmit}>
         {/* Name */}
         <div>
-          <label className="block text-primary font-semibold mb-2">
+          <label className="block text-primary/60 font-semibold mb-2">
             Nama Lengkap
           </label>
           <input
@@ -28,7 +30,9 @@ const ContactForm = () => {
 
         {/* Email */}
         <div>
-          <label className="block text-primary font-semibold mb-2">Email</label>
+          <label className="block text-primary/60 font-semibold mb-2">
+            Email
+          </label>
           <input
             type="email"
             className="w-full p-4 border border-accent/30 rounded-lg focus:border-accent focus:outline-none transall"
@@ -38,7 +42,7 @@ const ContactForm = () => {
 
         {/* Phone */}
         <div>
-          <label className="block text-primary font-semibold mb-2">
+          <label className="block text-primary/60 font-semibold mb-2">
             Nomor Telepon
           </label>
           <input
@@ -50,7 +54,7 @@ const ContactForm = () => {
 
         {/* Subject */}
         <div>
-          <label className="block text-primary font-semibold mb-2">
+          <label className="block text-primary/60 font-semibold mb-2">
             Subjek
           </label>
           <select className="w-full p-4 border border-accent/30 rounded-lg focus:border-accent focus:outline-none transall">

@@ -107,9 +107,9 @@ const LocationsAndPartners = () => {
 
   return (
     <section className="py-8 md:py-16 bg-secondary">
-      <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+      <div className="container mx-auto flexcc space-y-5 px-3 sm:px-4 md:px-6 lg:px-8">
         {/* Cabang Fisik */}
-        <div className="mb-12 md:mb-16">
+        <div className="w-full mb-12 md:mb-16">
           <div className="text-center mb-8 md:mb-12">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-3 md:mb-4 font-playfair">
               Lokasi Cabang
@@ -166,7 +166,7 @@ const LocationsAndPartners = () => {
         </div>
 
         {/* Mitra Perkebunan */}
-        <div className="mb-12 md:mb-16">
+        <div className="w-full mb-12 md:mb-16">
           <div className="text-center mb-8 md:mb-12">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-3 md:mb-4 font-playfair">
               Mitra Perkebunan
@@ -213,7 +213,7 @@ const LocationsAndPartners = () => {
         </div>
 
         {/* Mitra Bisnis */}
-        <div>
+        <div className="w-full">
           <div className="text-center mb-8 md:mb-12">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-3 md:mb-4 font-playfair">
               Mitra Bisnis
