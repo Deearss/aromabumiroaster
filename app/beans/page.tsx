@@ -5,14 +5,14 @@ import { Metadata } from "next";
 import ProductList from "../components/ProductList";
 
 export const metadata: Metadata = {
-  title: "Premium Coffee Beans - Aroma Bumi Roaster",
+  title: "Biji Kopi Premium - Aroma Bumi Roaster",
   description:
     "Jelajahi koleksi lengkap biji kopi premium Indonesia dari Aroma Bumi Roaster. Single origin berkualitas tinggi dari berbagai daerah.",
 };
 
 const BeansPage = () => {
   return (
-    <div className="pt-10">
+    <div>
       <Navbar notRoot={true} />
 
       {/* Hero Section */}

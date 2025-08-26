@@ -219,7 +219,7 @@ const HeroSection = () => {
             />
           </div>
           <div className="text-center mt-2 text-base font-bold gap-1 antialiased flexc !items-end">
-            <span>Loading video for background</span>
+            <span>Memuat video latar belakang</span>
             <PulseLoader
               className="mb-1"
               color="#f0ebe3"
@@ -231,10 +231,10 @@ const HeroSection = () => {
 
         <div className="text-center mt-2 text-xs text-secondary/70 animate-pulseku">
           <div>
-            • {isClient ? (isMobile ? "Mobile" : "Desktop") : "Loading"}{" "}
-            optimized •
+            • {isClient ? (isMobile ? "Mobile" : "Desktop") : "Memuat"}{" "}
+            dioptimalkan •
           </div>
-          <div>Preparing your premium coffee journey </div>
+          <div>Mempersiapkan perjalanan kopi premium Anda</div>
         </div>
       </section>
     );
@@ -255,6 +255,7 @@ const HeroSection = () => {
             preload="auto"
             onCanPlay={handleVideoCanPlay}
             src={videoSource}
+            title="Video by gziku from Pixabay"
             className="object-cover h-full w-full pointer-events-none select-none"
           />
         </div>
@@ -306,7 +307,7 @@ const HeroSection = () => {
                 : { duration: 2.8, ease: "easeOut", delay: 1.5 }
             }
           >
-            Premium Indonesian Coffee Beans, Roasted to Perfection
+            Biji Kopi Premium Indonesia, Disangrai dengan Sempurna
           </motion.h2>
 
           <ButtonHoverTopFlip skipAnimation={hasAnimated} />

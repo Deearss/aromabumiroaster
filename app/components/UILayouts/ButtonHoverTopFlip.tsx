@@ -44,7 +44,7 @@ const ButtonHoverTopFlip = ({
           opacity-100
           lg:group-hover:-translate-y-[150%]"
           >
-            Explore Our Beans
+            Jelajahi Kopi Kami
           </div>
           <div
             className="
@@ -62,7 +62,7 @@ const ButtonHoverTopFlip = ({
           lg:group-hover:opacity-100
           lg:group-hover:translate-y-0"
           >
-            Discover the Flavors
+            Temukan Cita Rasanya
           </div>
         </Link>
       </motion.div>

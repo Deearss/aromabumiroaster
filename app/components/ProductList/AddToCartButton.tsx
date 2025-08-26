@@ -15,7 +15,7 @@ const AddToCartButton = ({ product, children }: AddToCartButtonProps) => {
   const handleAddToCart = (product: Product) => {
     addToCart(product);
 
-    console.log("Added to cart:", product.name);
+    console.log("Ditambahkan ke keranjang:", product.name);
   };
   return (
     <>

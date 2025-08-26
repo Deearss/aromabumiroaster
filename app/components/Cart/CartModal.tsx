@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import {
   FaTimes,
   FaTrash,
@@ -157,6 +158,15 @@ const CartModal = ({ isOpen, onClose }: CartModalProps) => {
                         exit={{ opacity: 0, y: -20 }}
                         className="bg-white w-full rounded-lg p-4 shadow-sm border border-secondary"
                       >
+                        <div className="bg-primary/50 w-full h-40 lg:h-80 mb-3 overflow-hidden rounded">
+                          <Image
+                            src={item.image || ""}
+                            alt={item.name}
+                            width={1920}
+                            height={1080}
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
                         <div className="flexc w-full justify-between mb-3">
                           <div className="flex-1">
                             <h3 className="font-semibold text-primary text-sm">
@@ -235,7 +245,7 @@ const CartModal = ({ isOpen, onClose }: CartModalProps) => {
                   {/* Total */}
                   <div className="flexc justify-between mb-4">
                     <span className="text-sm font-semibold text-primary">
-                      Total ({itemCount} item{itemCount > 1 ? "s" : ""})
+                      Total ({itemCount} item{itemCount > 1 ? "" : ""})
                     </span>
                     <span className="text-base font-bold text-accent">
                       Rp{totalPrice.toLocaleString("id-ID")}
@@ -244,8 +254,16 @@ const CartModal = ({ isOpen, onClose }: CartModalProps) => {
 
                   {/* Action Buttons */}
                   <div className="space-y-3 text-sm">
-                    <button className="w-full bg-primary text-secondary py-3 rounded-lg font-semibold hover:bg-primary_dark transition-colors">
-                      Checkout
+                    <button
+                      onClick={() => {
+                        alert(
+                          "Terima kasih telah berbelanja di Aroma Bumi Roaster, semoga harimu selalu menyenangkan 🙏😄🙏"
+                        );
+                        clearCart();
+                      }}
+                      className="w-full bg-primary text-secondary py-3 rounded-lg font-semibold hover:bg-primary_dark transition-colors"
+                    >
+                      Beli Sekarang
                     </button>
                     <button
                       onClick={clearCart}

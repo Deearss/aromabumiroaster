@@ -1,6 +1,8 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { FaTiktok } from "react-icons/fa6";
+import ContactForm from "./ContactForm";
 import {
   FaMapMarkerAlt,
   FaPhone,
@@ -8,8 +10,7 @@ import {
   FaClock,
   FaInstagram,
   FaFacebook,
-  FaWhatsapp,
-  FaCoffee,
+  FaYoutube,
 } from "react-icons/fa";
 
 const ContactPage = () => {
@@ -18,50 +19,37 @@ const ContactPage = () => {
       <Navbar notRoot={true} />
 
       {/* Hero Section */}
-      <section className="bg-primary text-secondary pt-32 pb-16 px-6">
-        <div className="max-w-6xl mx-auto text-center">
-          <div className="flexc gap-3 mb-6">
-            <FaCoffee className="text-4xl text-accent" />
-            <h1 className="font-playfair text-4xl lg:text-6xl font-bold">
-              Contact Us
-            </h1>
-          </div>
-          <p className="text-lg lg:text-xl text-secondary/80 max-w-2xl mx-auto">
-            Hubungi kami untuk pertanyaan, pemesanan, atau sekadar berbagi
-            cerita tentang kopi favoritmu
-          </p>
-        </div>
-      </section>
+      <section className="h-6 md:h-10 lg:h-20 w-full bg-transparent" />
 
       {/* Main Content */}
-      <section className="py-16 px-6 bg-secondary">
+      <section className="py-8 md:py-12 lg:py-16 px-3 md:px-4 lg:px-6 bg-secondary">
         <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-10 lg:gap-12 xl:gap-16">
             {/* Contact Information */}
-            <div className="space-y-8">
+            <div className="space-y-6 md:space-y-8">
               <div>
-                <h2 className="font-playfair text-3xl font-bold text-primary mb-8">
-                  Get In Touch
+                <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4 md:mb-6 lg:mb-8">
+                  Hubungi Kami
                 </h2>
-                <p className="text-text/80 text-lg mb-8">
+                <p className="text-text/80 text-sm md:text-base lg:text-lg mb-6 md:mb-8">
                   Kami selalu senang mendengar dari para pecinta kopi! Jangan
                   ragu untuk menghubungi kami melalui berbagai cara berikut.
                 </p>
               </div>
 
               {/* Contact Cards */}
-              <div className="space-y-6">
+              <div className="space-y-4 md:space-y-6">
                 {/* Location */}
-                <div className="bg-white p-6 rounded-xl shadow-lg border border-accent/20 hover:shadow-xl transall">
-                  <div className="flexc gap-4">
-                    <div className="flexcc w-12 h-12 bg-accent/20 rounded-full">
-                      <FaMapMarkerAlt className="text-accent text-xl" />
+                <div className="bg-white p-4 md:p-5 lg:p-6 rounded-xl shadow-lg border border-accent/20 hover:shadow-xl transall">
+                  <div className="flex items-center gap-3 md:gap-4">
+                    <div className="flexcc w-10 h-10 md:w-11 md:h-11 lg:w-12 lg:h-12 bg-accent/20 rounded-full flex-shrink-0">
+                      <FaMapMarkerAlt className="text-accent text-lg md:text-xl" />
                     </div>
-                    <div className="flex-1">
-                      <h3 className="font-bold text-primary mb-1">
+                    <div className="flex-1 min-w-0">
+                      <h3 className="font-bold text-primary mb-1 text-sm md:text-base">
                         Lokasi Kami
                       </h3>
-                      <p className="text-text/70">
+                      <p className="text-text/70 text-xs md:text-sm leading-tight">
                         Jl. Coffee Street No. 123
                         <br />
                         Menteng, Jakarta Pusat 10310
@@ -71,44 +59,50 @@ const ContactPage = () => {
                 </div>
 
                 {/* Phone */}
-                <div className="bg-white p-6 rounded-xl shadow-lg border border-accent/20 hover:shadow-xl transall">
-                  <div className="flexc gap-4">
-                    <div className="flexcc w-12 h-12 bg-accent/20 rounded-full">
-                      <FaPhone className="text-accent text-xl" />
+                <div className="bg-white p-4 md:p-5 lg:p-6 rounded-xl shadow-lg border border-accent/20 hover:shadow-xl transall">
+                  <div className="flex items-center gap-3 md:gap-4">
+                    <div className="flexcc w-10 h-10 md:w-11 md:h-11 lg:w-12 lg:h-12 bg-accent/20 rounded-full flex-shrink-0">
+                      <FaPhone className="text-accent text-lg md:text-xl" />
                     </div>
-                    <div className="flex-1">
-                      <h3 className="font-bold text-primary mb-1">Telepon</h3>
-                      <p className="text-text/70">+62 21 1234 5678</p>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="font-bold text-primary mb-1 text-sm md:text-base">
+                        Telepon
+                      </h3>
+                      <p className="text-text/70 text-xs md:text-sm">
+                        0821-1234-5678
+                      </p>
                     </div>
                   </div>
                 </div>
 
                 {/* Email */}
-                <div className="bg-white p-6 rounded-xl shadow-lg border border-accent/20 hover:shadow-xl transall">
-                  <div className="flexc gap-4">
-                    <div className="flexcc w-12 h-12 bg-accent/20 rounded-full">
-                      <FaEnvelope className="text-accent text-xl" />
+                <div className="bg-white p-4 md:p-5 lg:p-6 rounded-xl shadow-lg border border-accent/20 hover:shadow-xl transall">
+                  <div className="flex items-center gap-3 md:gap-4">
+                    <div className="flexcc w-10 h-10 md:w-11 md:h-11 lg:w-12 lg:h-12 bg-accent/20 rounded-full flex-shrink-0">
+                      <FaEnvelope className="text-accent text-lg md:text-xl" />
                     </div>
-                    <div className="flex-1">
-                      <h3 className="font-bold text-primary mb-1">Email</h3>
-                      <p className="text-text/70">
-                        hello@aromabumiroasters.com
+                    <div className="flex-1 min-w-0">
+                      <h3 className="font-bold text-primary mb-1 text-sm md:text-base">
+                        Email
+                      </h3>
+                      <p className="text-text/70 text-xs md:text-sm">
+                        hello@aromabumiroaster.com
                       </p>
                     </div>
                   </div>
                 </div>
 
                 {/* Operating Hours */}
-                <div className="bg-white p-6 rounded-xl shadow-lg border border-accent/20 hover:shadow-xl transall">
-                  <div className="flexc gap-4">
-                    <div className="flexcc w-12 h-12 bg-accent/20 rounded-full">
-                      <FaClock className="text-accent text-xl" />
+                <div className="bg-white p-4 md:p-5 lg:p-6 rounded-xl shadow-lg border border-accent/20 hover:shadow-xl transall">
+                  <div className="flex items-start gap-3 md:gap-4">
+                    <div className="flexcc w-10 h-10 md:w-11 md:h-11 lg:w-12 lg:h-12 bg-accent/20 rounded-full flex-shrink-0">
+                      <FaClock className="text-accent text-lg md:text-xl" />
                     </div>
-                    <div className="flex-1">
-                      <h3 className="font-bold text-primary mb-1">
+                    <div className="flex-1 min-w-0">
+                      <h3 className="font-bold text-primary mb-1 text-sm md:text-base">
                         Jam Operasional
                       </h3>
-                      <div className="text-text/70 space-y-1">
+                      <div className="text-text/70 text-xs md:text-sm space-y-1">
                         <p>Senin - Jumat: 07:00 - 22:00</p>
                         <p>Sabtu - Minggu: 08:00 - 23:00</p>
                       </div>
@@ -118,133 +112,70 @@ const ContactPage = () => {
               </div>
 
               {/* Social Media */}
-              <div className="pt-8">
-                <h3 className="font-playfair text-xl font-bold text-primary mb-4">
-                  Follow Us
+              <div className="pt-6 md:pt-8">
+                <h3 className="text-center lg:text-left text-lg md:text-xl font-bold text-primary mb-3 md:mb-4">
+                  Ikuti Kami
                 </h3>
-                <div className="flex gap-4">
+                <div className="flexc lg:justify-start gap-3 md:gap-4">
                   <a
                     href="#"
-                    className="flexcc w-12 h-12 bg-accent text-white rounded-full hover:bg-accent/80 transall clicked"
+                    className="flexcc w-10 h-10 md:w-11 md:h-11 lg:w-12 lg:h-12 bg-accent text-white rounded-full hover:bg-accent/80 transall clicked"
                   >
-                    <FaInstagram className="text-xl" />
+                    <FaTiktok className="text-lg md:text-xl" />
                   </a>
                   <a
                     href="#"
-                    className="flexcc w-12 h-12 bg-accent text-white rounded-full hover:bg-accent/80 transall clicked"
+                    className="flexcc w-10 h-10 md:w-11 md:h-11 lg:w-12 lg:h-12 bg-accent text-white rounded-full hover:bg-accent/80 transall clicked"
                   >
-                    <FaFacebook className="text-xl" />
+                    <FaInstagram className="text-lg md:text-xl" />
                   </a>
                   <a
                     href="#"
-                    className="flexcc w-12 h-12 bg-accent text-white rounded-full hover:bg-accent/80 transall clicked"
+                    className="flexcc w-10 h-10 md:w-11 md:h-11 lg:w-12 lg:h-12 bg-accent text-white rounded-full hover:bg-accent/80 transall clicked"
                   >
-                    <FaWhatsapp className="text-xl" />
+                    <FaFacebook className="text-lg md:text-xl" />
+                  </a>
+                  <a
+                    href="#"
+                    className="flexcc w-10 h-10 md:w-11 md:h-11 lg:w-12 lg:h-12 bg-accent text-white rounded-full hover:bg-accent/80 transall clicked"
+                  >
+                    <FaYoutube className="text-lg md:text-xl" />
                   </a>
                 </div>
               </div>
             </div>
 
             {/* Contact Form */}
-            <div className="bg-white p-8 rounded-2xl shadow-xl">
-              <h2 className="font-playfair text-3xl font-bold text-primary mb-6">
-                Send us a Message
+            <div className="bg-white p-4 md:p-6 lg:p-8 rounded-2xl shadow-xl">
+              <h2 className="text-center text-xl md:text-2xl lg:text-3xl font-bold text-primary mb-4 md:mb-6">
+                Kirim Pesan
               </h2>
 
-              <form className="space-y-6">
-                {/* Name */}
-                <div>
-                  <label className="block text-primary font-semibold mb-2">
-                    Nama Lengkap
-                  </label>
-                  <input
-                    type="text"
-                    className="w-full p-4 border border-accent/30 rounded-lg focus:border-accent focus:outline-none transall"
-                    placeholder="Masukkan nama lengkap Anda"
-                  />
-                </div>
-
-                {/* Email */}
-                <div>
-                  <label className="block text-primary font-semibold mb-2">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    className="w-full p-4 border border-accent/30 rounded-lg focus:border-accent focus:outline-none transall"
-                    placeholder="contoh@email.com"
-                  />
-                </div>
-
-                {/* Phone */}
-                <div>
-                  <label className="block text-primary font-semibold mb-2">
-                    Nomor Telepon
-                  </label>
-                  <input
-                    type="tel"
-                    className="w-full p-4 border border-accent/30 rounded-lg focus:border-accent focus:outline-none transall"
-                    placeholder="+62 812 3456 7890"
-                  />
-                </div>
-
-                {/* Subject */}
-                <div>
-                  <label className="block text-primary font-semibold mb-2">
-                    Subjek
-                  </label>
-                  <select className="w-full p-4 border border-accent/30 rounded-lg focus:border-accent focus:outline-none transall">
-                    <option value="">Pilih subjek</option>
-                    <option value="pemesanan">Pemesanan Kopi</option>
-                    <option value="kerjasama">Kerjasama Bisnis</option>
-                    <option value="feedback">Feedback & Saran</option>
-                    <option value="lainnya">Lainnya</option>
-                  </select>
-                </div>
-
-                {/* Message */}
-                <div>
-                  <label className="block text-primary font-semibold mb-2">
-                    Pesan
-                  </label>
-                  <textarea
-                    rows={5}
-                    className="w-full p-4 border border-accent/30 rounded-lg focus:border-accent focus:outline-none transall resize-none"
-                    placeholder="Tulis pesan Anda di sini..."
-                  ></textarea>
-                </div>
-
-                {/* Submit Button */}
-                <button
-                  type="submit"
-                  className="w-full bg-accent text-white py-4 px-6 rounded-lg font-semibold hover:bg-accent/90 transall clicked flexc gap-2"
-                >
-                  <FaEnvelope />
-                  Kirim Pesan
-                </button>
-              </form>
+              <ContactForm />
             </div>
           </div>
         </div>
       </section>
 
       {/* Map Section */}
-      <section className="py-16 px-6 bg-primary_dark">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="font-playfair text-3xl lg:text-4xl font-bold text-secondary mb-8">
-            Temukan Kami
+      <section className="py-20 px-6 bg-primary_dark">
+        <div className="max-w-6xl mx-auto text-center relative">
+          <h2 className="text-3xl lg:text-4xl font-bold text-secondary mb-8">
+            Kantor Pusat
           </h2>
-          <div className="bg-accent/20 rounded-2xl p-8 flexcc min-h-[300px]">
-            <div className="text-secondary/80 flexcc gap-4">
-              <FaMapMarkerAlt className="text-accent text-4xl" />
-              <div>
-                <p className="text-lg mb-2">Google Maps Integration</p>
-                <p className="text-sm">
-                  Jl. Coffee Street No. 123, Menteng, Jakarta Pusat
-                </p>
-              </div>
-            </div>
+
+          <div className="relative z-[1] w-full rounded-2xl flexcc min-h-[450px] overflow-hidden">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126920.24102051799!2d106.74711713003863!3d-6.229740108094114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5d2e764b12d%3A0x3d2ad6e1e0e9bcc8!2sMonumen%20Nasional!5e0!3m2!1sid!2sid!4v1756195729703!5m2!1sid!2sid"
+              width="100%"
+              height="450px"
+              style={{ border: 0 }}
+              allowFullScreen={true}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </div>
+
           <p className="text-secondary/70 mt-6 max-w-2xl mx-auto">
             Terletak di jantung kota Jakarta, coffee shop kami mudah dijangkau
             dengan berbagai transportasi umum. Parkir tersedia dan akses ramah

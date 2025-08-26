@@ -12,56 +12,56 @@ const Gallery = () => {
       title: "Proses Roasting Premium",
       description:
         "Biji kopi Aceh Gayo sedang di-roast dengan kontrol suhu optimal",
-      category: "Roasting Process",
+      category: "Proses Sangrai",
     },
     {
       id: 2,
-      title: "Quality Control Team",
+      title: "Tim Kontrol Kualitas",
       description:
         "Tim QC kami melakukan cupping test untuk memastikan kualitas",
-      category: "Quality Control",
+      category: "Kontrol Kualitas",
     },
     {
       id: 3,
-      title: "Warehouse & Storage",
+      title: "Gudang & Penyimpanan",
       description: "Fasilitas penyimpanan dengan kontrol suhu dan kelembaban",
-      category: "Facility",
+      category: "Fasilitas",
     },
     {
       id: 4,
-      title: "Packaging Department",
+      title: "Departemen Kemasan",
       description: "Proses packaging menggunakan valve bag untuk freshness",
-      category: "Packaging",
+      category: "Kemasan",
     },
     {
       id: 5,
-      title: "Coffee Bean Selection",
+      title: "Seleksi Biji Kopi",
       description: "Proses seleksi manual biji kopi sebelum roasting",
-      category: "Selection",
+      category: "Seleksi",
     },
     {
       id: 6,
-      title: "Delivery Team",
+      title: "Tim Pengiriman",
       description: "Tim distribusi kami siap mengirim ke seluruh Indonesia",
-      category: "Distribution",
+      category: "Distribusi",
     },
   ];
 
   return (
-    <section className="py-16 bg-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="w-full py-8 md:py-16 bg-white">
+      <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4 font-playfair">
-            Gallery
+        <div className="text-center mb-8 md:mb-12">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-3 md:mb-4 font-playfair">
+            Galeri
           </h2>
-          <p className="text-lg text-accent max-w-2xl mx-auto">
+          <p className="text-sm md:text-base lg:text-lg text-accent max-w-2xl mx-auto px-2 md:px-0">
             Lihat proses produksi dan fasilitas premium Aroma Bumi Roaster
           </p>
         </div>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 lg:gap-6">
           {galleryImages.map((image, index) => (
             <motion.div
               key={image.id}
@@ -72,7 +72,7 @@ const Gallery = () => {
               className="group cursor-pointer overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
             >
               {/* Image Placeholder */}
-              <div className="relative h-64 bg-gradient-to-br from-accent to-primary overflow-hidden">
+              <div className="relative h-48 md:h-56 lg:h-64 bg-gradient-to-br from-accent to-primary overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/70 to-transparent"></div>
 
                 {/* Coffee pattern overlay */}
@@ -89,19 +89,21 @@ const Gallery = () => {
                 </div>
 
                 {/* Content Overlay */}
-                <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
+                <div className="absolute inset-0 flex flex-col justify-end p-3 md:p-4 lg:p-6 text-white">
                   <span className="inline-block bg-secondary/90 text-primary text-xs font-bold px-2 py-1 rounded mb-2 w-fit">
                     {image.category}
                   </span>
-                  <h3 className="text-lg font-bold mb-1">{image.title}</h3>
-                  <p className="text-sm opacity-90 group-hover:opacity-100 transition-opacity">
+                  <h3 className="text-sm md:text-base lg:text-lg font-bold mb-1">
+                    {image.title}
+                  </h3>
+                  <p className="text-xs md:text-sm opacity-90 group-hover:opacity-100 transition-opacity leading-tight md:leading-relaxed">
                     {image.description}
                   </p>
                 </div>
 
                 {/* Hover icon */}
-                <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                  <FaCoffee className="text-secondary text-xl" />
+                <div className="absolute top-3 md:top-4 right-3 md:right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <FaCoffee className="text-secondary text-lg md:text-xl" />
                 </div>
               </div>
             </motion.div>

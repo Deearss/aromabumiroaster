@@ -1,4 +1,5 @@
-import { FaEnvelope, FaHome, FaInfoCircle } from "react-icons/fa";
+import { FaEnvelope } from "react-icons/fa";
+import { FaHouse, FaBusinessTime } from "react-icons/fa6";
 import { GiCoffeeBeans } from "react-icons/gi";
 
 import { cn } from "../../../lib/utils";
@@ -7,10 +8,10 @@ import CartTab from "./CartTab";
 import { motion } from "framer-motion";
 
 const navLinks = [
-  { name: "Home", href: "/", icon: FaHome },
-  { name: "Beans", href: "/beans", icon: GiCoffeeBeans },
-  { name: "About", href: "/about", icon: FaInfoCircle },
-  { name: "Contact", href: "/contact", icon: FaEnvelope },
+  { name: "Beranda", href: "/", icon: FaHouse },
+  { name: "Kopi", href: "/beans", icon: GiCoffeeBeans },
+  { name: "Karir", href: "/about", icon: FaBusinessTime },
+  { name: "Kontak", href: "/contact", icon: FaEnvelope },
 ];
 
 interface LineTabProps {
