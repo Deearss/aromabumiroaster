@@ -164,7 +164,11 @@ export default function ProductList({ showCTA = true }: ProductListProps) {
         className="w-full relative h-10 lg:h-20 bg-transparent"
       />
       <section className="py-20 bg-secondary">
-        <div className="container flexcc gap-24 mx-auto px-6">
+        <div
+          className={`container flexcc ${
+            showCTA ? "gap-0" : "gap-24"
+          } mx-auto px-6`}
+        >
           {/* Header - menggunakan font-playfair untuk judul utama */}
           <div className={`${showCTA ? "order-2" : "order-1"}`}>
             <div className="text-center mb-10">
@@ -316,7 +320,7 @@ export default function ProductList({ showCTA = true }: ProductListProps) {
                       </div>
 
                       {/* Description */}
-                      <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+                      <p className="text-gray-600 h-[9rem] md:h-[5.5rem] text-sm mb-4 leading-relaxed">
                         {bundle.description}
                       </p>
 
@@ -348,7 +352,7 @@ export default function ProductList({ showCTA = true }: ProductListProps) {
 
           {/* Call to Action */}
           {showCTA && (
-            <div className="text-center mt-16">
+            <div className="order-3 text-center mt-16">
               <p className="text-lg text-text mb-6">
                 Ingin mencoba semua varian? Dapatkan paket bundle dengan harga
                 spesial!
